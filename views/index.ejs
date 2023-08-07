@@ -7,8 +7,23 @@
 </head>
 <body>
     <h1><%= title %></h1>
-    
-    <!-- Mostrar los posts aquí -->
-
+    <main>
+        <ul>
+                <% for (const { id, title, description, author } of posts) { %>
+                    <li>
+                        <span>
+                            <%= id %>
+                        </span>
+                        <h3>
+                            <%= title %>
+                        </h3>
+                        <p>
+                            <%= description %>
+                        </p>
+                        <span><i>Por <%= author %></i></span>
+                    </li>
+            <% } %>
+        </ul>
+    </main> 
 </body>
 </html>
